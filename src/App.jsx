@@ -1,17 +1,14 @@
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import ThemeContext from './ThemeContext';
+import Page from './Page'
 
-import User from './User'
-import { useState } from 'react'
-import Display from './Display';
-import InputBox from './InputBox';
 
 function App() {
-  const [text,setText ] = useState('');
+  const theme = 'dark'
+
   return (
-   <div>
-   <InputBox setText={setText}/>
-   <Display text={text}/>
-   </div>
+    <ThemeContext.Provider value={theme}>
+      <Page />
+    </ThemeContext.Provider>
   )
 
 }
