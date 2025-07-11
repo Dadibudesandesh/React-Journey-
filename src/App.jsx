@@ -1,20 +1,18 @@
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 
 import User from './User'
+import { useState } from 'react'
+import Display from './Display';
+import InputBox from './InputBox';
 
 function App() {
-
+  const [text,setText ] = useState('');
   return (
-    <Router>
-
-      <Routes>
-        <Route path='/user/:id' element={<User/>} />
-        <Route path='*' element={<h2>404 Page not found</h2>} />
-      </Routes>
-
-    </Router>
+   <div>
+   <InputBox setText={setText}/>
+   <Display text={text}/>
+   </div>
   )
 
 }
-
 export default App
