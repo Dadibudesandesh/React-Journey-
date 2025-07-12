@@ -1,14 +1,12 @@
-import ThemeContext from './ThemeContext';
-import Page from './Page'
-
+import Counter from "./Counter"
 
 function App() {
-  const theme = 'dark'
 
   return (
-    <ThemeContext.Provider value={theme}>
-      <Page />
-    </ThemeContext.Provider>
+    <div>
+      <Counter />
+    </div>
+
   )
 
 }
