@@ -1,12 +1,9 @@
-import Counter from "./Counter"
+import PostList from "./PostList"
 
 function App() {
 
   return (
-    <div>
-      <Counter />
-    </div>
-
+    <PostList/>
   )
 
 }

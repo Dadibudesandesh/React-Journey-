@@ -1,43 +1,18 @@
-import { useEffect, useState } from "react";
+import useFetch from "./useFetch";
 
-function PostList() {
-    const [posts, setPosts] = useState([]);
-    const [loading, setLoading] = useState([true]);
-    const [error,setError]=useState(null)
-
-    useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/posts')
-            // .then((res) => res.json())
-            .then((res)=>{
-                if(!res.ok) throw new Error("Network Issue...")
-                    return res.json()
-            })
-            .then((data) => {
-                setPosts(data);
-                setLoading(false);
-            })
-            .catch((err)=>{
-                console.error(err)
-                setError(err.message);
-                setLoading(false)
-            });
-          
-    },[]);
-
-    if (loading) return <p>Lodding.....</p>
-    if (error) return <p>Error : {error}</p>
+function PostList(){
+    const{data: posts,loading}=useFetch('https://jsonplaceholder.typicode.com/posts')
 
     return(
         <div>
             <h2>Posts</h2>
-            <ul>
-                {posts.slice(0,5).map((post)=>(
-                    <li key={post.id}>
-                        <strong>{post.title}</strong>
-                        <p>{post.body}</p>
-                    </li>
-                ))}
-            </ul>
+            {loading ? <p> Loading....</p> : posts.slice(0,5).map((p)=>(
+                <div key={p.id}>
+                    <h4>{p.id}</h4>
+                    <h4>{p.title}</h4>
+                    <p>{p.body}</p>
+                </div>
+            ))}
         </div>
     )
 }
