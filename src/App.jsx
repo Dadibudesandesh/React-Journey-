@@ -1,11 +1,13 @@
-import Card from "./Card"
+import ThemeProvider from "./ThemeProvider"
+import ThemeButton from "./ThemeButton"
+import './App.css'
 function App() {
 
   return (
-    <Card title={"React Tip"}>
-      <p>Use CUstome Hooks To Clean Logic</p>
-    </Card>
+    <ThemeProvider>
+      <h1>React Theme Toggle</h1>
+      <ThemeButton />
+    </ThemeProvider>
   )
-
 }
 export default App
