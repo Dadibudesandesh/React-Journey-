@@ -1,9 +1,10 @@
-import PostList from "./PostList"
-
+import Card from "./Card"
 function App() {
 
   return (
-    <PostList/>
+    <Card title={"React Tip"}>
+      <p>Use CUstome Hooks To Clean Logic</p>
+    </Card>
   )
 
 }
