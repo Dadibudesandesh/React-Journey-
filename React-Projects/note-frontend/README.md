@@ -1,12 +1,10 @@
-# React + Vite
+# Note App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- In this project i build frontend note application in react, So basically in this small react project i do simple display the one form ( title,description) and available notes in database.
+- We can simple perform CRUD operations on notes like add,update,delete,edit,etc.
+- I add searching functionality on this project. This is a real time searching i dont know what is actual we call but i eaxplain
+- In serch bar when we can start to typing character then this is a automatically fetch data and display,So single character can be serch on note.
 
-Currently, two official plugins are available:
+## Project Preview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+<img width="1919" height="643" alt="image" src="https://github.com/user-attachments/assets/12a73b54-b7bf-4c6c-b853-8c3eeae20aba" />
